@@ -13,6 +13,9 @@ app.use(express.json());
 app.use(cors({ origin: "*" }));
 
 connectDB();
+app.get("/",(req,res)=>{
+    res.send("healthy API!");
+});
 app.use("/auth", authRoutes);
 app.use("/yoga", yogaRoutes);
 
